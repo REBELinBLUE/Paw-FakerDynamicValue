@@ -1,0 +1,18 @@
+language: node_js
+before_script:
+  - make build
+script:
+  - make lint
+  - make test
+before_deploy:
+  - make archive
+deploy:
+  provider: releases
+  api_key:
+    secure:
+  file: build/FakerDynamicValues.zip
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
+    repo: REBELinBLUE/Paw-Faker
