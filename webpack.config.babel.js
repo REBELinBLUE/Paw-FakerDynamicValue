@@ -1,8 +1,5 @@
 import path from 'path';
 
-const name = 'FakerDynamicValue';
-const production = process.env.NODE_ENV === 'production';
-
 module.exports = {
   target: 'web',
   entry: [
@@ -14,9 +11,8 @@ module.exports = {
       __dirname,
       './build/com.rebelinblue.PawExtensions.FakerDynamicValue',
     ),
-    pathInfo: true,
     publicPath: '/build/',
-    filename: `${name}.js`,
+    filename: 'FakerDynamicValue.js',
   },
   module: {
     loaders: [{
