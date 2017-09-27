@@ -40,7 +40,7 @@ coverage:
 	npm run test:coverage
 
 ## Create an archive for the extension
-archive: build
+archive:
 	cd ./build/; zip -r FakerDynamicValue.zip "$(identifier)/"
 
 ## Prints this help

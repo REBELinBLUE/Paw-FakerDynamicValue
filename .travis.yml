@@ -15,7 +15,7 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 
 before_deploy:
-  - make archive
+  - NODE_ENV=production && make archive
 
 deploy:
   provider: releases
