@@ -22,6 +22,7 @@ describe('FakerGenerator', () => {
     expect(result).to.be.empty();
   });
 
+  // FIXME: This should use a spy rather than use the real class
   it('Calls faker', () => {
     const generator = new FakerGenerator('en', 'random', 'boolean');
 
@@ -30,6 +31,7 @@ describe('FakerGenerator', () => {
     expect(result).to.be.a('boolean');
   });
 
+  // FIXME: This should use a spy rather than use the real class
   it('Passes the arguments to faker', () => {
     const generator = new FakerGenerator('en', 'random', 'number', '{ min: 10, max: 10 }');
 

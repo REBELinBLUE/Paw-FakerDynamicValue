@@ -10,14 +10,6 @@ export default class FakerGenerator {
   }
 
   generate() {
-    try {
-      return this.callMethod();
-    } catch (exception) {
-      return '';
-    }
-  }
-
-  callMethod() {
     if (
       typeof this.faker[this.category] !== 'undefined' &&
       typeof this.faker[this.category][this.method] !== 'undefined'

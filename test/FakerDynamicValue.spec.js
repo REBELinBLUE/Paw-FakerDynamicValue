@@ -50,13 +50,13 @@ describe('FakerDynamicValue', () => {
   // FIXME: This should use a spy rather than use the real class as now we are
   // testing something outside the scope of this test
   it('Should call the FakerGenerator', () => {
-    // dynamicValues.locale = 'en';
-    // dynamicValues.category = 'internet';
-    // dynamicValues.method = 'password';
-    // dynamicValues.options = '15, true';
-    //
-    // const result = dynamicValues.evaluate();
-    //
-    // expect(result.length).to.be.equal(15);
+    dynamicValues.locale = 'en';
+    dynamicValues.category = 'random';
+    dynamicValues.method = 'number';
+    dynamicValues.options = '{ min: 10, max: 10 }';
+
+    const result = dynamicValues.evaluate();
+
+    expect(result).to.be.equal(10);
   });
 });
