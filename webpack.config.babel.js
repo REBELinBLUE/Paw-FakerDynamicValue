@@ -1,18 +1,18 @@
 import path from 'path';
 
-const name = 'FakerDynamicValues';
+const name = 'FakerDynamicValue';
 const production = process.env.NODE_ENV === 'production';
 
 module.exports = {
   target: 'web',
   entry: [
     'faker',
-    './src/FakerDynamicValues.js',
+    './src/FakerDynamicValue.js',
   ],
   output: {
     path: path.join(
       __dirname,
-      './build/com.rebelinblue.PawExtensions.FakerDynamicValues',
+      './build/com.rebelinblue.PawExtensions.FakerDynamicValue',
     ),
     pathInfo: true,
     publicPath: '/build/',

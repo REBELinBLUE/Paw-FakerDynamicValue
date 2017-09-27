@@ -1,19 +1,19 @@
 import { use, expect } from 'chai';
 import dirtyChai from 'dirty-chai';
 
-import FakerDynamicValues from '../src/FakerDynamicValues';
+import FakerDynamicValue from '../src/FakerDynamicValue';
 
 use(dirtyChai);
 
-describe('FakerDynamicValues', () => {
+describe('FakerDynamicValue', () => {
   let dynamicValues;
 
   beforeEach(() => {
-    dynamicValues = new FakerDynamicValues();
+    dynamicValues = new FakerDynamicValue();
   });
 
   it('Should return the title', () => {
-    expect(dynamicValues.title()).to.be.equal(FakerDynamicValues.title);
+    expect(dynamicValues.title()).to.be.equal(FakerDynamicValue.title);
   });
 
   it('Should return empty text when no method or category are set', () => {

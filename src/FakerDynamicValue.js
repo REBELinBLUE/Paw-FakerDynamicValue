@@ -13,10 +13,10 @@ function getLocaleList() {
   return locales;
 }
 
-export default class FakerDynamicValues {
+export default class FakerDynamicValue {
   static title = 'Faker';
 
-  static identifier = 'com.rebelinblue.PawExtensions.FakerDynamicValues';
+  static identifier = 'com.rebelinblue.PawExtensions.FakerDynamicValue';
 
   static help = 'https://github.com/REBELinBLUE/paw-faker#readme';
 
@@ -62,7 +62,7 @@ export default class FakerDynamicValues {
   title(context) {
     this.context = context;
 
-    return FakerDynamicValues.title;
+    return FakerDynamicValue.title;
   }
 
   text(context) {
@@ -90,4 +90,4 @@ export default class FakerDynamicValues {
   }
 }
 
-registerDynamicValueClass(FakerDynamicValues);
+registerDynamicValueClass(FakerDynamicValue);

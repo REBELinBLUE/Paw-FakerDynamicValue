@@ -1,8 +1,8 @@
 {
-  "name": "Paw-FakerDynamicValues",
+  "name": "Paw-FakerDynamicValue",
   "version": "1.0.0",
   "description": "",
-  "main": "src/FakerDynamicValues.js",
+  "main": "src/FakerDynamicValue.js",
   "author": "Stephen Ball",
   "license": "MIT",
   "homepage": "https://github.com/REBELinBLUE/paw-faker",

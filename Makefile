@@ -6,7 +6,7 @@ GREEN    := $(shell tput -Txterm setaf 2)
 YELLOW   := $(shell tput -Txterm setaf 3)
 RESET    := $(shell tput -Txterm sgr0)
 
-identifier=com.rebelinblue.PawExtensions.FakerDynamicValues
+identifier=com.rebelinblue.PawExtensions.FakerDynamicValue
 extensions_dir=$(HOME)/Library/Containers/com.luckymarmot.Paw/Data/Library/Application Support/com.luckymarmot.Paw/Extensions/
 
 ## Build the extension
@@ -41,7 +41,7 @@ coverage:
 
 ## Create an archive for the extension
 archive: build
-	cd ./build/; zip -r FakerDynamicValues.zip "$(identifier)/"
+	cd ./build/; zip -r FakerDynamicValue.zip "$(identifier)/"
 
 ## Prints this help
 help:
