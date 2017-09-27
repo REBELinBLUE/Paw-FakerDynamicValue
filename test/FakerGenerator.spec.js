@@ -6,11 +6,35 @@ import FakerGenerator from '../src/FakerGenerator';
 use(dirtyChai);
 
 describe('FakerGenerator', () => {
+  it('Returns an empty string if the category is invalid', () => {
+    const generator = new FakerGenerator('en', 'invalid');
+
+    const result = generator.generate();
+
+    expect(result).to.be.empty();
+  });
+
+  it('Returns an empty string if the category is valid but the method is invalid', () => {
+    const generator = new FakerGenerator('en', 'internet', 'invalid');
+
+    const result = generator.generate();
+
+    expect(result).to.be.empty();
+  });
+
   it('Calls faker', () => {
     const generator = new FakerGenerator('en', 'random', 'boolean');
 
     const result = generator.generate();
 
     expect(result).to.be.a('boolean');
+  });
+
+  it('Passes the arguments to faker', () => {
+    const generator = new FakerGenerator('en', 'random', 'number', '{ min: 10, max: 10 }');
+
+    const result = generator.generate();
+
+    expect(result).to.be.equal(10);
   });
 });
