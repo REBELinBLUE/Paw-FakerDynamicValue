@@ -1,5 +1,5 @@
 import path from 'path';
-import webpack from 'webpack';
+import UglifyPlugin from 'uglifyjs-webpack-plugin';
 
 const production = (process.env.NODE_ENV === 'production');
 
@@ -15,7 +15,7 @@ module.exports = {
       './build/com.rebelinblue.PawExtensions.FakerDynamicValue',
     ),
     publicPath: '/build/',
-    filename: production ? 'FakerDynamicValue.min.js' : 'FakerDynamicValue.js',
+    filename: 'FakerDynamicValue.js',
   },
   module: {
     loaders: [{
@@ -25,8 +25,8 @@ module.exports = {
     }],
   },
   plugins: production ? [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false }
-    })
+    new UglifyPlugin({
+      compress: { warnings: false },
+    }),
   ] : [],
 };
