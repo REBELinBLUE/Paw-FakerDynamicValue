@@ -17,7 +17,7 @@ function getLocaleList() {
   return locales;
 }
 
-class FakerDynamicValues {
+export default class FakerDynamicValues {
   static title = 'Faker';
 
   static identifier = 'com.rebelinblue.PawExtensions.FakerDynamicValues';
@@ -28,7 +28,6 @@ class FakerDynamicValues {
     new InputField('locale', 'Language', 'Select', {
       choices: getLocaleList(),
       persisted: true,
-      defaultValue: 'en',
     }),
 
     new InputField('category', 'Category', 'Select', {
@@ -37,9 +36,11 @@ class FakerDynamicValues {
         random: 'Basic Random Data',
         commerce: 'Commerce',
         company: 'Company',
+        database: 'Database',
         date: 'Dates',
         finance: 'Finance',
         hacker: 'Hacker',
+        helpers: 'Helpers',
         image: 'Images',
         internet: 'Internet',
         name: 'Names',
@@ -56,26 +57,34 @@ class FakerDynamicValues {
 
   constructor() {
     this.context = null;
+    this.locale = null;
+    this.category = null;
+    this.method = null;
+    this.options = null;
   }
 
   title(context) {
     this.context = context;
 
-    return FakerGenerator.title;
+    return FakerDynamicValues.title;
   }
 
   text(context) {
     this.context = context;
 
     // FIXME: Show an error if invalid!
-    return this.method ? `${this.category}.${this.method}(${this.options})` : '';
+    if (this.category && this.method) {
+      return `${this.category}.${this.method}(${this.options ? this.options : ''})`;
+    }
+
+    return '';
   }
 
   evaluate(context) {
     this.context = context;
 
     const generator = new FakerGenerator(
-      this.locale,
+      this.locale ? this.locale : 'en',
       this.category,
       this.method,
       this.options,
