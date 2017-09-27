@@ -9,7 +9,7 @@ before_script:
 script:
   - make lint
   - make coverage
-  - npm-check
+  - npm-check --specials=webpack,eslint --ignore path # FIXME: Ignore shouldn't be needed as the webpack special should work
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
