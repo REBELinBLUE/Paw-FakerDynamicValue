@@ -26,15 +26,18 @@ install: clean build
 
 ## Run tests
 test:
+	@echo "${GREEN}Unit tests${RESET}"
 	npm run test
 
 ## Run eslint
 lint:
+	@echo "${GREEN}ESLint${RESET}"
 	npm run lint
 
 ## Generate code coverage
 coverage:
-	@echo "Nothing here yet"
+	@echo "${GREEN}Code coverage${RESET}"
+	npm run test:coverage
 
 ## Create an archive for the extension
 archive: build
