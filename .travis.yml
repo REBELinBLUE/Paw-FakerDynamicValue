@@ -4,10 +4,12 @@ language: node_js
 
 before_script:
   - make build
+  - npm install -g npm-check
 
 script:
   - make lint
   - make coverage
+  - npm-check
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

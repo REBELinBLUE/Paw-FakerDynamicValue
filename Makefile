@@ -31,7 +31,7 @@ test:
 
 ## Run eslint
 lint:
-	@echo "${GREEN}ESLint${RESET}"
+	@echo "${GREEN}Lint${RESET}"
 	npm run lint
 
 ## Generate code coverage
