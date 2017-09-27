@@ -1,18 +1,27 @@
+sudo: false
+
 language: node_js
+
 before_script:
   - make build
+
 script:
   - make lint
-  - make test
+  - make coverage
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -f coverage/coverage.json
+
 before_deploy:
   - make archive
+
 deploy:
   provider: releases
   api_key:
-    secure:
+    secure: aA3wLtlplmRW3DRZU/Kgq2zQ/mmcCMHnT1qBWtTZ1IfAn1B/Si15z3lGAk7jiXSBjYkLTRcwnpNKiGwiu+hltT7M5GDSDBwE3+dO9nZwbRwY1zezLdyXdrHiVsZiXSloFfIYt4btcYlwOx1u0ASnxybMp9TRNvkOZDvDhwWX4Uexo7SL5gtRcZIDMbYJX/hzU2kGsd6Wf50MmuMgEz0v1o4xtNm2yiaphPLrwDjBLOh2f6H9KdSB+ljMpSGqb9oQgQ480tKyBIUAx00u0nQsc3SL0Ah8a+oX/OTQFVLLskvidbr6RgtD4LdMjSpFKZMbkz51Vzhh8JanpEKf5ras5UC7ZKAV/jZmmKi8D7fVcwYmGu6mn0pE4RuZcDO8YRQW0mbI/hhVSHUoWLGKGoBYG155K6Dz763lubIsqF3yCVuT/is98hMz6e8OJvQQeFPrcsj8DFhPXUlc5DpU4lwDD8pAJ5xFJexbIqwanJOOSwQFWnuD4A7XEQSSd1hffUvlrU1KbUY7ISMGYM7BKfNg6TGq6APIiu3bo7FQ/4Mb3FcYQNlYBFgQKQRhlLuZvLn1WbZaHO5Im9424+3ApNqOZVZynV4+3hIQMbEfQavBEFXsRWR2wWncoBupVhPqXiNJGtCm4YwjdHCeSOuu2l2Ml6XeFz9axGRUI6FTTZITHTo=
   file: build/FakerDynamicValues.zip
   skip_cleanup: true
   on:
     tags: true
     all_branches: true
-    repo: REBELinBLUE/Paw-Faker
+    repo: REBELinBLUE/paw-faker
