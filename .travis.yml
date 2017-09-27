@@ -6,7 +6,7 @@ before_install:
   - npm install -g npm-check
 
 script:
-  - make build
+  - NODE_ENV=production make build
   - make lint
   - make coverage
   - npm-check --ignore path # FIXME: Ignore shouldn't be needed as the webpack should detect this
@@ -15,7 +15,7 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 
 before_deploy:
-  - NODE_ENV=production make archive
+  - make archive
 
 deploy:
   provider: releases
