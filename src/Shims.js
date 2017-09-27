@@ -4,7 +4,10 @@ if (
 ) {
   class InputField {
     constructor(key, name, type, options, prefix = '') {
-      this.obj = { key, name, type, options };
+      this.key = key;
+      this.name = name;
+      this.type = type;
+      this.options = options;
       this.prefix = prefix;
     }
   }

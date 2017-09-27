@@ -1,11 +1,9 @@
 import { use, expect } from 'chai';
 import dirtyChai from 'dirty-chai';
-import sinonChai from 'sinon-chai';
 
 import FakerDynamicValues from '../src/FakerDynamicValues';
 
 use(dirtyChai);
-use(sinonChai);
 
 describe('FakerDynamicValues', () => {
   let dynamicValues;

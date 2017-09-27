@@ -2,10 +2,6 @@ import faker from 'faker';
 import FakerGenerator from './FakerGenerator';
 import { registerDynamicValueClass, InputField } from './Shims';
 
-if (typeof Error.captureStackTrace === 'undefined') {
-  Error.captureStackTrace = () => {};
-}
-
 // FIXME: Move this inline
 function getLocaleList() {
   const locales = {};
