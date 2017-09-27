@@ -2,7 +2,6 @@
 .PHONY: help
 .SILENT:
 
-GREEN  := $(shell tput -Txterm setaf 2)
 YELLOW := $(shell tput -Txterm setaf 3)
 RESET  := $(shell tput -Txterm sgr0)
 
@@ -26,17 +25,14 @@ install: clean build
 
 ## Run tests
 test:
-	@echo "${GREEN}Unit tests${RESET}"
 	npm run test
 
 ## Run eslint
 lint:
-	@echo "${GREEN}Lint${RESET}"
 	npm run lint
 
 ## Generate code coverage
 coverage:
-	@echo "${GREEN}Code coverage${RESET}"
 	npm run test:coverage
 
 ## Create an archive for the extension

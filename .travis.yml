@@ -2,11 +2,11 @@ sudo: false
 
 language: node_js
 
-before_script:
-  - make build
+before_install:
   - npm install -g npm-check
 
 script:
+  - make build
   - make lint
   - make coverage
   - npm-check --ignore path # FIXME: Ignore shouldn't be needed as the webpack should detect this
