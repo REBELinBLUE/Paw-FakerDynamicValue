@@ -37,7 +37,11 @@ coverage:
 
 ## Create an archive for the extension
 archive:
+ifndef TRAVIS_TAG
 	cd ./build/; zip -r FakerDynamicValue.zip "$(identifier)/"
+else
+	cd ./build/; zip -r FakerDynamicValue-$(TRAVIS_TAG).zip "$(identifier)/"
+endif
 
 ## Prints this help
 help:
