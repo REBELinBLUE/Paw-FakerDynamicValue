@@ -1,3 +1,4 @@
+// This file is simply to prevent tools such as PHPStorm from complaining about undefined values
 if (
   typeof registerDynamicValueClass === 'undefined' ||
   typeof InputField === 'undefined'

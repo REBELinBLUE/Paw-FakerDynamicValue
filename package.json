@@ -34,7 +34,7 @@
     "build": "./node_modules/.bin/rimraf build/ && ./node_modules/.bin/webpack --bail --display-error-details",
     "build:prod": "NODE_ENV=production ./node_modules/.bin/rimraf build/ && ./node_modules/.bin/webpack --bail --display-error-details",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha --compilers js:babel-register --recursive --reporter spec",
-    "test:coverage": "NODE_ENV=test ./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/mocha/bin/_mocha -- --compilers js:babel-register --recursive --reporter spec",
+    "test:coverage": "NODE_ENV=test ./node_modules/.bin/babel-node -- ./node_modules/.bin/babel-istanbul cover -x src/__mocks__/shims.js ./node_modules/mocha/bin/_mocha -- --compilers js:babel-register --recursive --reporter spec",
     "lint": "./node_modules/.bin/eslint -c .eslintrc --quiet src/* test/*"
   },
   "repository": {

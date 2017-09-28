@@ -1,8 +1,7 @@
 import faker from 'faker';
 import FakerGenerator from './FakerGenerator';
-import { registerDynamicValueClass, InputField } from './Shims';
+import { registerDynamicValueClass, InputField } from './__mocks__/shims';
 
-// FIXME: Move this inline
 function getLocaleList() {
   const locales = {};
 
@@ -68,7 +67,6 @@ export default class FakerDynamicValue {
   text(context) {
     this.context = context;
 
-    // FIXME: Show an error if invalid!
     if (this.category && this.method) {
       return `${this.category}.${this.method}(${this.options ? this.options : ''})`;
     }
@@ -80,7 +78,7 @@ export default class FakerDynamicValue {
     this.context = context;
 
     const generator = new FakerGenerator(
-      this.locale ? this.locale : 'en',
+      this.locale,
       this.category,
       this.method,
       this.options,
