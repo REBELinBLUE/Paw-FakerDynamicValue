@@ -10,7 +10,7 @@ A dynamic value extension for [Paw](http://paw.cloud) using [Faker](https://gith
 
 To use the extension simply insert the dynamic value from the right click menu > Add Dynamic Value.. > Extension > Faker.
 
-Select the `language` for the data and the `category` of the data you wish to generate. Then enter the name of the `method` to call. Finally enter the `arguments`, these should be in exactly the same format as if you were writing the javascript directory (i.e. strings quoted and each argument separated by a comma).
+Select the `language` for the data and the `category` of the data you wish to generate. Then enter the name of the `method` to call. Finally enter the `arguments`, these should be in exactly the same format as if you were writing the javascript directly (i.e. strings quoted and each argument separated by a comma).
 
 ### Examples
 
@@ -46,7 +46,7 @@ Select the `language` for the data and the `category` of the data you wish to ge
 
 *Equivalent to*: `faker.random.arrayElement(['one', 'two', 'three', 'four']);`
 
-**Method with an array argument**
+**Method with an object argument**
 
 * *Category*: `Basic Random Data`
 * *Method*: `number`
@@ -54,7 +54,7 @@ Select the `language` for the data and the `category` of the data you wish to ge
 
 *Equivalent to*: `faker.random.number({ min: 10, max: 100 });`
 
-See the [Faker wiki](https://github.com/Marak/faker.js/wiki) for the list of available categories, methods and the parameters.
+See the [Faker wiki](https://github.com/Marak/faker.js/wiki) for the list of available categories, methods and the arguments.
 
 ## Installing
 
@@ -67,7 +67,7 @@ $ npm install
 $ NODE_ENV=production make install
 ```
 
-You can also download the latest build from the [releases](https://github.com/REBELinBLUE/Paw-FakerDynamicValue) tab, then simply extract to the extensions directory. (See Paw > Extensions > Open Extensions Directory).
+You can also download the latest build from the [releases](https://github.com/REBELinBLUE/Paw-FakerDynamicValue/releases) tab, then simply extract to the extensions directory. (See Paw > Extensions > Open Extensions Directory).
 
 ## License
 

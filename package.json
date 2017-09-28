@@ -1,6 +1,6 @@
 {
   "name": "Paw-FakerDynamicValue",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A dynamic value extension for Paw using Faker to generate data",
   "main": "src/FakerDynamicValue.js",
   "author": "Stephen Ball",
