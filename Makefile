@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-.PHONY: help
+.PHONY: build test
 .SILENT:
 
 YELLOW := $(shell tput -Txterm setaf 3)

@@ -15,8 +15,7 @@
     "babel-eslint": "^8.0.0",
     "babel-istanbul": "^0.12.2",
     "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-stage-1": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
@@ -24,18 +23,18 @@
     "eslint": "^4.0.0",
     "eslint-config-airbnb-base": "^12.0.1",
     "eslint-plugin-import": "^2.2.0",
-    "mocha": "^3.5.3",
+    "mocha": "^4.0.0",
     "path": "^0.12.7",
     "rimraf": "^2.6.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.6.0"
   },
   "scripts": {
-    "build": "./node_modules/.bin/rimraf build/ && ./node_modules/.bin/webpack --bail --display-error-details",
-    "build:prod": "NODE_ENV=production ./node_modules/.bin/rimraf build/ && ./node_modules/.bin/webpack --bail --display-error-details",
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha --compilers js:babel-register --recursive --reporter spec",
-    "test:coverage": "NODE_ENV=test ./node_modules/.bin/babel-node -- ./node_modules/.bin/babel-istanbul cover -x src/__mocks__/shims.js ./node_modules/mocha/bin/_mocha -- --compilers js:babel-register --recursive --reporter spec",
-    "lint": "./node_modules/.bin/eslint -c .eslintrc --quiet src/* test/*"
+    "build": "rimraf build/ && webpack --bail --display-error-details",
+    "build:prod": "NODE_ENV=production rimraf build/ && webpack --bail --display-error-details",
+    "test": "NODE_ENV=test mocha",
+    "test:coverage": "NODE_ENV=test babel-node -- ./node_modules/.bin/babel-istanbul cover -x src/__mocks__/shims.js ./node_modules/mocha/bin/_mocha",
+    "lint": "eslint src/ test/"
   },
   "repository": {
     "type": "git",
