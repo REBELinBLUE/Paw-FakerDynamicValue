@@ -17,7 +17,7 @@ export default class FakerDynamicValue {
 
   static identifier = 'com.rebelinblue.PawExtensions.FakerDynamicValue';
 
-  static help = 'https://github.com/REBELinBLUE/paw-faker#readme';
+  static help = 'https://github.com/REBELinBLUE/Paw-FakerDynamicValue#readme';
 
   static inputs = [
     new InputField('locale', 'Language', 'Select', {
