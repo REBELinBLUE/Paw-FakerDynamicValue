@@ -9,6 +9,9 @@ script:
   - NODE_ENV=production make build
   - make lint
   - make coverage
+
+# Don't want it to trigger a failure
+after_script:
   - npm-check --ignore path # FIXME: Ignore shouldn't be needed as the webpack should detect this
 
 after_success:
