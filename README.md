@@ -16,10 +16,10 @@ Select the `language` for the data and the `category` of the data you wish to ge
 
 **Method with no arguments**
 
-* *Category*: `internet`
+* *Category*: `Basic Random Data`
 * *Method*: `uuid`
 
-*Equivalent to*: `faker.internet.uuid();`
+*Equivalent to*: `faker.random.uuid();`
 
 
 **Method with single argument**
