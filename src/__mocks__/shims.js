@@ -1,7 +1,7 @@
 // This file is simply to prevent tools such as PHPStorm from complaining about undefined values
 if (
-  typeof registerDynamicValueClass === 'undefined' ||
-  typeof InputField === 'undefined'
+  typeof registerDynamicValueClass === 'undefined'
+  || typeof InputField === 'undefined'
 ) {
   class InputField {
     constructor(key, name, type, options, prefix = '') {
@@ -14,7 +14,7 @@ if (
   }
 
   module.exports = {
-    registerDynamicValueClass: _class => _class,
+    registerDynamicValueClass: (_class) => _class,
     InputField,
   };
 } else {

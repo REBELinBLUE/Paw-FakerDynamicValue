@@ -4,6 +4,7 @@ import UglifyPlugin from 'uglifyjs-webpack-plugin';
 const production = (process.env.NODE_ENV === 'production');
 
 module.exports = {
+  mode: production ? 'production' : 'development',
   target: 'web',
   entry: [
     'faker',
@@ -18,15 +19,17 @@ module.exports = {
     filename: 'FakerDynamicValue.js',
   },
   module: {
-    loaders: [{
-      loader: 'babel-loader',
-      include: [path.resolve(__dirname, 'src')],
+    rules: [{
       test: /\.js?$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+      },
     }],
   },
   plugins: production ? [
     new UglifyPlugin({
-      compress: { warnings: false },
+      uglifyOptions: { warnings: false },
     }),
   ] : [],
 };
