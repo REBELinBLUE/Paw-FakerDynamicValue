@@ -21,7 +21,6 @@ Select the `language` for the data and the `category` of the data you wish to ge
 
 *Equivalent to*: `faker.random.uuid();`
 
-
 **Method with single argument**
 
 * *Category*: `Internet`

@@ -11,8 +11,8 @@ export default class FakerGenerator {
 
   generate() {
     if (
-      typeof this.faker[this.category] !== 'undefined' &&
-      typeof this.faker[this.category][this.method] !== 'undefined'
+      typeof this.faker[this.category] !== 'undefined'
+      && typeof this.faker[this.category][this.method] !== 'undefined'
     ) {
       return eval(`this.faker.${this.category}.${this.method}(${this.args});`);
     }

@@ -1,4 +1,4 @@
 {
-  "presets": ["env", "stage-1"],
-  "plugins": []
+  "presets": ["@babel/env"],
+  "plugins": ["@babel/plugin-proposal-class-properties"]
 }
