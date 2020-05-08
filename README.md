@@ -1,6 +1,6 @@
 # Paw-FakerDynamicValue
 
-[![Build Status](https://img.shields.io/travis/REBELinBLUE/Paw-FakerDynamicValue/master.svg?style=flat-square&label=Travis+CI)](https://travis-ci.com/REBELinBLUE/Paw-FakerDynamicValue)
+[![Build Status](https://img.shields.io/travis/com/REBELinBLUE/Paw-FakerDynamicValue/master.svg?style=flat-square&label=Travis+CI)](https://travis-ci.com/REBELinBLUE/Paw-FakerDynamicValue)
 [![Code Coverage](https://img.shields.io/codecov/c/github/REBELinBLUE/Paw-FakerDynamicValue/master.svg?style=flat-square&label=Coverage)](https://codecov.io/gh/REBELinBLUE/Paw-FakerDynamicValue)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square&label=License)](/LICENSE.md)
 
