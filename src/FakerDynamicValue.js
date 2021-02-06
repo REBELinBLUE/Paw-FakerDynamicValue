@@ -34,6 +34,7 @@ export default class FakerDynamicValue {
         database: 'Database',
         date: 'Dates',
         finance: 'Finance',
+        git: 'Git',
         hacker: 'Hacker',
         helpers: 'Helpers',
         image: 'Images',
@@ -42,6 +43,9 @@ export default class FakerDynamicValue {
         phone: 'Phone',
         lorem: 'Text',
         system: 'System',
+        time: 'Time',
+        music: 'Music',
+        vehicle: 'Vehicle',
       },
     }),
 
