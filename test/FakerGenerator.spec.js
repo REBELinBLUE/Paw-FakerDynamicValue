@@ -24,7 +24,7 @@ describe('FakerGenerator', () => {
 
   // FIXME: This should use a spy rather than use the real class
   it('Calls faker', () => {
-    const generator = new FakerGenerator('en', 'random', 'boolean');
+    const generator = new FakerGenerator('en', 'datatype', 'boolean');
 
     const result = generator.generate();
 
@@ -33,7 +33,7 @@ describe('FakerGenerator', () => {
 
   // FIXME: This should use a spy rather than use the real class
   it('Passes the arguments to faker', () => {
-    const generator = new FakerGenerator('en', 'random', 'number', '{ min: 10, max: 10 }');
+    const generator = new FakerGenerator('en', 'datatype', 'number', '{ min: 10, max: 10 }');
 
     const result = generator.generate();
 

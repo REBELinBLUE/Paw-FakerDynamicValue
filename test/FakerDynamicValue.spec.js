@@ -51,7 +51,7 @@ describe('FakerDynamicValue', () => {
   // testing something outside the scope of this test
   it('Should call the FakerGenerator', () => {
     dynamicValues.locale = 'en';
-    dynamicValues.category = 'random';
+    dynamicValues.category = 'datatype';
     dynamicValues.method = 'number';
     dynamicValues.options = '{ min: 10, max: 10 }';
 

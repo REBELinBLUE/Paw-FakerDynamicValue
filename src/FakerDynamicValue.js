@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import FakerGenerator from './FakerGenerator';
 import { registerDynamicValueClass, InputField } from './__mocks__/shims';
 
@@ -29,9 +29,12 @@ export default class FakerDynamicValue {
       choices: {
         address: 'Address',
         random: 'Basic Random Data',
+        animal: 'Animal',
+        color: 'Color',
         commerce: 'Commerce',
         company: 'Company',
         database: 'Database',
+        datatype: 'Datatypes',
         date: 'Dates',
         finance: 'Finance',
         git: 'Git',
@@ -39,13 +42,15 @@ export default class FakerDynamicValue {
         helpers: 'Helpers',
         image: 'Images',
         internet: 'Internet',
+        lorem: 'Text',
         name: 'Names',
         phone: 'Phone',
-        lorem: 'Text',
+        //science: 'Science',
         system: 'System',
         time: 'Time',
         music: 'Music',
         vehicle: 'Vehicle',
+        word: 'Word',
       },
     }),
 

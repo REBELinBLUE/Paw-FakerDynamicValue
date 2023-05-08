@@ -7,7 +7,7 @@ module.exports = {
   mode: production ? 'production' : 'development',
   target: 'web',
   entry: [
-    'faker',
+    '@faker-js/faker',
     './src/FakerDynamicValue.js',
   ],
   output: {

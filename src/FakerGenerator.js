@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker}  from '@faker-js/faker';
 
 export default class FakerGenerator {
   constructor(locale, category, method, args) {
